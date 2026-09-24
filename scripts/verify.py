@@ -6,7 +6,8 @@ root = Path(__file__).resolve().parents[1]
 errors = []
 required_files = [
     "README.md","SERVICE.md","PARTNERSHIPS.md","SECURITY.md","COMPLIANCE.md",
-    "docs/SAMPLE_AUDIT.md"
+    "docs/SAMPLE_AUDIT.md","docs/COMPANY_FAQ.md","docs/ENGAGEMENT_PROCESS.md",
+    "docs/TECHNICAL_GUARDRAILS.md","docs/SYNTHETIC_SAMPLE_REPORT.md"
 ]
 for name in required_files:
     if not (root / name).is_file():
@@ -22,6 +23,19 @@ patterns = {
 for pattern,label in patterns.items():
     if re.search(pattern,text,re.I):
         errors.append(label)
+
+
+
+# Synthetic examples must identify themselves clearly.
+for sample in ["docs/SAMPLE_AUDIT.md","docs/SYNTHETIC_SAMPLE_REPORT.md"]:
+    content=(root/sample).read_text(encoding="utf-8").lower()
+    if "synthetic" not in content:
+        errors.append(f"{sample} must be clearly labeled synthetic")
+
+# Public materials must not contain common secret file references.
+for forbidden in [".env.production", "client-data/", "customer-data/"]:
+    if forbidden in text:
+        errors.append(f"public content references forbidden data path: {forbidden}")
 
 if "Validation only" not in (root/"README.md").read_text(encoding="utf-8"):
     errors.append("README must state Validation only")
