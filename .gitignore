@@ -1,0 +1,12 @@
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+client-data/
+customer-data/
+exports/
+__pycache__/
+*.py[cod]
