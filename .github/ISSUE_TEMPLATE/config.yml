@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security guidance
+    url: https://github.com/imim2009im-a11y/digital-insight-ai-workflow-audit/blob/main/SECURITY.md
+    about: Read this before reporting security concerns or sharing technical context.

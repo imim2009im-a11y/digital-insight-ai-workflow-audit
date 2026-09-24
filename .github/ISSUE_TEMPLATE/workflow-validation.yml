@@ -1,0 +1,49 @@
+name: Workflow validation interest
+description: Express interest in validating one repetitive workflow.
+title: "[Validation] "
+labels: ["validation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a non-paid validation channel. Do not submit passwords, API keys, customer exports, or confidential operational data.
+  - type: input
+    id: organization
+    attributes:
+      label: Organization
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Your role
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Workflow area
+      options:
+        - Operations
+        - E-commerce
+        - Reporting
+        - Customer service
+        - Content / marketing
+        - Partner onboarding
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Describe the workflow at a high level
+      description: Do not include confidential data. One workflow only.
+    validations:
+      required: true
+  - type: checkbox
+    id: validation_only
+    attributes:
+      label: Validation status
+      options:
+        - label: I understand this is a validation conversation, not a paid checkout or guaranteed-outcome offer.
+          required: true

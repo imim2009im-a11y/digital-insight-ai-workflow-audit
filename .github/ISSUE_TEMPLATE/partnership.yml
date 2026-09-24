@@ -1,0 +1,43 @@
+name: Partnership inquiry
+description: Explore a technical, research, ecosystem, or implementation partnership.
+title: "[Partnership] "
+labels: ["partnership"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your interest. Do not include credentials, customer data, confidential files, or regulated personal data.
+  - type: input
+    id: organization
+    attributes:
+      label: Organization
+      placeholder: Company or organization name
+    validations:
+      required: true
+  - type: dropdown
+    id: partnership_type
+    attributes:
+      label: Partnership type
+      options:
+        - Workflow validation
+        - Technical implementation
+        - Security / privacy
+        - Research / ecosystem
+        - Distribution / referral
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: What would a useful collaboration achieve?
+      description: Describe the business or technical objective without confidential information.
+    validations:
+      required: true
+  - type: checkbox
+    id: confidentiality
+    attributes:
+      label: Data safety
+      options:
+        - label: I confirm this issue contains no credentials, confidential client data, or sensitive personal data.
+          required: true
