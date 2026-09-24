@@ -29,6 +29,18 @@ It does not promise revenue, savings, or automatic replacement of employees.
 - paid-sales readiness is blocked until compliance requirements are satisfied,
 - secrets and client data are not part of the public repository.
 
+
+
+## للشركات في السعودية
+
+هذا المستودع ليس متجرًا ولا وعدًا بنتيجة. هو واجهة شفافة لمنهجية **AI Workflow Audit** قبل أي تعامل مدفوع.
+
+ابدأ هنا:
+- [أسئلة الشركات](docs/COMPANY_FAQ.md)
+- [مسار التحقق والتجربة](docs/ENGAGEMENT_PROCESS.md)
+- [الحواجز التقنية والأمنية](docs/TECHNICAL_GUARDRAILS.md)
+- [نموذج تقرير تجريبي ببيانات صناعية](docs/SYNTHETIC_SAMPLE_REPORT.md)
+
 ## For companies
 
 If your team has one repetitive workflow in operations, e-commerce, reporting, content, or customer service, the first step is a non-paid validation conversation.
